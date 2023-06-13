@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Club List View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ClubListViewController" customModule="club" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5eu-Wh-86R">
+                                <rect key="frame" x="0.0" y="40" width="393" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mp9-Q6-cBT">
+                                        <rect key="frame" x="23.999999999999996" y="3" width="39.666666666666657" height="34.333333333333336"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="chevron.left" catalog="system">
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Club" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqM-jT-Emq">
+                                        <rect key="frame" x="75.666666666666671" y="8" width="43.666666666666671" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="9YB-O8-C6c"/>
+                                    <constraint firstItem="mqM-jT-Emq" firstAttribute="centerY" secondItem="5eu-Wh-86R" secondAttribute="centerY" id="A79-bp-799"/>
+                                    <constraint firstItem="mqM-jT-Emq" firstAttribute="leading" secondItem="Mp9-Q6-cBT" secondAttribute="trailing" constant="12" id="NKn-nv-vjl"/>
+                                    <constraint firstItem="Mp9-Q6-cBT" firstAttribute="centerY" secondItem="5eu-Wh-86R" secondAttribute="centerY" id="Ndq-4v-Jbr"/>
+                                    <constraint firstItem="Mp9-Q6-cBT" firstAttribute="leading" secondItem="5eu-Wh-86R" secondAttribute="leading" constant="24" id="YfR-8K-pG9"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bsg-im-em0">
+                                <rect key="frame" x="0.0" y="80" width="393" height="738"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5eu-Wh-86R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8iF-2o-IXA"/>
+                            <constraint firstItem="bsg-im-em0" firstAttribute="top" secondItem="5eu-Wh-86R" secondAttribute="bottom" id="H49-aN-bDH"/>
+                            <constraint firstItem="5eu-Wh-86R" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="40" id="Irp-HK-Yru"/>
+                            <constraint firstItem="bsg-im-em0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NmX-FY-zwf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bsg-im-em0" secondAttribute="bottom" id="nZr-ps-j8W"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bsg-im-em0" secondAttribute="trailing" id="qIj-u3-6BP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5eu-Wh-86R" secondAttribute="trailing" id="sBQ-xS-86Q"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="Mp9-Q6-cBT" id="mrv-en-Bqq"/>
+                        <outlet property="clubLabel" destination="mqM-jT-Emq" id="qY4-sZ-qzh"/>
+                        <outlet property="clubListTableView" destination="bsg-im-em0" id="KDW-bo-4kV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.left" catalog="system" width="97" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
