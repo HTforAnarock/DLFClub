@@ -55,7 +55,7 @@ extension ClubListViewController: UITableViewDataSource {
         
         
         cell.cellImage.image = pics[indexPath.row]
-        cell.nameOfClub.text = clubListArray[indexPath.row]
+        cell.clubNameLabel.text = clubListArray[indexPath.row]
         return cell
     }
     
